@@ -1,0 +1,37 @@
+Create SQL Database
+
+CREATE DATABASE Employees
+GO
+Use Employees
+GO
+CREATE TABLE Employee
+(
+[ID]           INT       PRIMARY KEY,
+[Name]         VARCHAR (30) NOT NULL,
+[Surname]      VARCHAR (30) NOT NULL,
+[Gender]       VARCHAR (10) NOT NULL,
+[PhoneNumber]  INT          NOT NULL,
+[DateofBirth]  DATETIME     NOT NULL,
+
+);
+
+SQL Queries
+
+Select * from Employee  
+select  max (ID) as  maxID from Employee 
+select * from Employee where Name like 'A%' 
+select * from Employee where ID between 3 and 5
+select * from Employee where Name = 'Ahmet' 
+select * from Employee  order by ID
+select * from Employee  order by ID desc
+select * from Employee where Name='Ahmet' and Surname='Cansever'
+select * from Employee where ID='1' or ID='5'
+select * from Employee where Name like 'B%' or Name like 'A%' 
+select * from Employee where DateofBirth >'1990-07-01'
+select * from Employee where  DateofBirth between '1990-07-01' AND '2000-01-01'
+select * from Employee where  DateofBirth >'1990-07-01' AND DateofBirth <'2000-01-01'
+select * from Employee where DateofBirth not between '1990-07-01' AND '2000-01-01'
+select * from Employee where PhoneNumber in(124254787,543541971) and Name like 'B%'
+
+
+
